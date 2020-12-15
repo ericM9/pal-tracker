@@ -1,7 +1,6 @@
 package test.pivotal.pal.tracker;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.Map;
 import io.pivotal.pal.tracker.EnvController;
 
@@ -11,10 +10,10 @@ public class EnvControllerTest {
     @Test
     public void getEnv() {
         EnvController controller = new EnvController(
-            "8675",
-            "12G",
-            "34",
-            "123.sesame.street"
+                "8675",
+                "12G",
+                "34",
+                "123.sesame.street"
         );
 
         Map<String, String> env = controller.getEnv();
@@ -25,4 +24,7 @@ public class EnvControllerTest {
         assertThat(env.get("CF_INSTANCE_ADDR")).isEqualTo("123.sesame.street");
     }
 
+
+
 }
+
